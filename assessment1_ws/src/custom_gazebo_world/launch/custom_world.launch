@@ -1,27 +1,27 @@
 <launch>
   <arg name="model" default="burger"/>
-  <arg name="x_pos" default="-2.5"/>
-  <arg name="y_pos" default="-3.35"/>
-  <arg name="z_pos" default="0.0"/>
+  <env name="TURTLEBOT3_MODEL" value="$(arg model)"/>
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(find custom_gazebo_world)/worlds/my_maze.world"/>
     <arg name="paused" value="false"/>
-    <arg name="use_sim_time" value="true"/>
-    <arg name="gui" value="true"/>
-    <arg name="headless" value="false"/>
-    <arg name="debug" value="false"/>
   </include>
 
   <include file="$(find turtlebot3_bringup)/launch/turtlebot3_remote.launch">
-    <arg name="model" value="burger" />
+    <arg name="model" value="$(arg model)" />
   </include>
-  <param name="robot_description" command="$(find xacro)/xacro --inorder $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro" />
 
   <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf" 
-        args="-urdf -model turtlebot3_$(arg model) -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
+        args="-urdf -model turtlebot3_burger -x -2.5 -y -3.35 -z 0.0 -param robot_description" />
 
-  
-  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  <arg name="map_file" default="$(find custom_gazebo_world)/maps/my_final_map.yaml"/>
+  <node pkg="map_server" type="map_server" name="map_server" args="$(arg map_file)"/>
 
+  <include file="$(find turtlebot3_navigation)/launch/amcl.launch"/>
+
+  <include file="$(find turtlebot3_navigation)/launch/move_base.launch">
+    <arg name="model" value="$(arg model)" />
+  </include>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find path_planning)/rviz/config.rviz"/>
 </launch>
