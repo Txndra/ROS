@@ -30,11 +30,17 @@
     <arg name="initial_pose_a" value="0.0"/>
   </include>
 
-  <include file="$(find turtlebot3_navigation)/launch/move_base.launch">
-    <arg name="model" value="$(arg model)" />
-  </include>
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <param name="base_global_planner" value="srv_client_plugin/SrvClientPlugin"/>
+    
+    <rosparam file="$(find turtlebot3_navigation)/param/costmap_common_params_burger.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find turtlebot3_navigation)/param/costmap_common_params_burger.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find turtlebot3_navigation)/param/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find turtlebot3_navigation)/param/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find turtlebot3_navigation)/param/move_base_params.yaml" command="load" />
+    <rosparam file="$(find turtlebot3_navigation)/param/dwa_local_planner_params_burger.yaml" command="load" />
+  </node>
 
   <node pkg="rviz" type="rviz" name="rviz" required="true"
         args="-d $(find path_planning)/rviz/config.rviz"/>
-
 </launch>
