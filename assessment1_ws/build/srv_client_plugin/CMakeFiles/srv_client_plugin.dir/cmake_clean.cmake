@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/xat/csed2/assessment1_ws/devel/lib/libsrv_client_plugin.pdb"
-  "/home/xat/csed2/assessment1_ws/devel/lib/libsrv_client_plugin.so"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/devel/lib/libsrv_client_plugin.pdb"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/devel/lib/libsrv_client_plugin.so"
   "CMakeFiles/srv_client_plugin.dir/src/srv_client_plugin.cpp.o"
 )
 

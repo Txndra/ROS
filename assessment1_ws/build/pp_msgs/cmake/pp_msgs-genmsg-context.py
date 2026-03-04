@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = ""
-services_str = "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv;/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv"
+services_str = "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv;/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv"
 pkg_name = "pp_msgs"
 dependencies_str = "std_msgs;trajectory_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"srv_client_plugin\" -Dsrv_client_plugin_EXPORTS
 
-CXX_INCLUDES = -I/home/xat/csed2/assessment1_ws/src/srv_client_plugin/include -I/home/xat/csed2/assessment1_ws/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 
+CXX_INCLUDES = -I/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/srv_client_plugin/include -I/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 
 

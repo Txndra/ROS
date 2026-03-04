@@ -1,8 +1,8 @@
-# Install script for directory: /home/xat/csed2/assessment1_ws/src/srv_client_plugin
+# Install script for directory: /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/srv_client_plugin
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xat/csed2/assessment1_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xat/csed2/assessment1_ws/build/srv_client_plugin/catkin_generated/installspace/srv_client_plugin.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/srv_client_plugin/catkin_generated/installspace/srv_client_plugin.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/srv_client_plugin/cmake" TYPE FILE FILES
-    "/home/xat/csed2/assessment1_ws/build/srv_client_plugin/catkin_generated/installspace/srv_client_pluginConfig.cmake"
-    "/home/xat/csed2/assessment1_ws/build/srv_client_plugin/catkin_generated/installspace/srv_client_pluginConfig-version.cmake"
+    "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/srv_client_plugin/catkin_generated/installspace/srv_client_pluginConfig.cmake"
+    "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/srv_client_plugin/catkin_generated/installspace/srv_client_pluginConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/srv_client_plugin" TYPE FILE FILES "/home/xat/csed2/assessment1_ws/src/srv_client_plugin/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/srv_client_plugin" TYPE FILE FILES "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/srv_client_plugin/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,7 +59,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsrv_client_plugin.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/xat/csed2/assessment1_ws/devel/lib/libsrv_client_plugin.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/devel/lib/libsrv_client_plugin.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsrv_client_plugin.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsrv_client_plugin.so")
     file(RPATH_CHANGE
@@ -76,10 +76,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/srv_client_plugin" TYPE DIRECTORY FILES "/home/xat/csed2/assessment1_ws/src/srv_client_plugin/include/srv_client_plugin/" REGEX "/\\.svn$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/srv_client_plugin" TYPE DIRECTORY FILES "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/srv_client_plugin/include/srv_client_plugin/" REGEX "/\\.svn$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/srv_client_plugin" TYPE FILE FILES "/home/xat/csed2/assessment1_ws/src/srv_client_plugin/scp_plugin.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/srv_client_plugin" TYPE FILE FILES "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/srv_client_plugin/scp_plugin.xml")
 endif()
 

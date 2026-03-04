@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xat/csed2/assessment1_ws/src
+CMAKE_SOURCE_DIR = /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xat/csed2/assessment1_ws/build
+CMAKE_BINARY_DIR = /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build
 
 # Utility rule file for turtlebot3_model_xacro_generated_to_devel_space_.
 
@@ -63,10 +63,10 @@ turtlebot3_model/CMakeFiles/turtlebot3_model_xacro_generated_to_devel_space_.dir
 .PHONY : turtlebot3_model/CMakeFiles/turtlebot3_model_xacro_generated_to_devel_space_.dir/build
 
 turtlebot3_model/CMakeFiles/turtlebot3_model_xacro_generated_to_devel_space_.dir/clean:
-	cd /home/xat/csed2/assessment1_ws/build/turtlebot3_model && $(CMAKE_COMMAND) -P CMakeFiles/turtlebot3_model_xacro_generated_to_devel_space_.dir/cmake_clean.cmake
+	cd /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/turtlebot3_model && $(CMAKE_COMMAND) -P CMakeFiles/turtlebot3_model_xacro_generated_to_devel_space_.dir/cmake_clean.cmake
 .PHONY : turtlebot3_model/CMakeFiles/turtlebot3_model_xacro_generated_to_devel_space_.dir/clean
 
 turtlebot3_model/CMakeFiles/turtlebot3_model_xacro_generated_to_devel_space_.dir/depend:
-	cd /home/xat/csed2/assessment1_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xat/csed2/assessment1_ws/src /home/xat/csed2/assessment1_ws/src/turtlebot3_model /home/xat/csed2/assessment1_ws/build /home/xat/csed2/assessment1_ws/build/turtlebot3_model /home/xat/csed2/assessment1_ws/build/turtlebot3_model/CMakeFiles/turtlebot3_model_xacro_generated_to_devel_space_.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/turtlebot3_model /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/turtlebot3_model /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/turtlebot3_model/CMakeFiles/turtlebot3_model_xacro_generated_to_devel_space_.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : turtlebot3_model/CMakeFiles/turtlebot3_model_xacro_generated_to_devel_space_.dir/depend
 

@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xat/csed2/assessment1_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

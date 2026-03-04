@@ -67,14 +67,14 @@ set(srv_client_plugin_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(srv_client_plugin_SOURCE_PREFIX /home/xat/csed2/assessment1_ws/src/srv_client_plugin)
-  set(srv_client_plugin_DEVEL_PREFIX /home/xat/csed2/assessment1_ws/devel)
+  set(srv_client_plugin_SOURCE_PREFIX /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/srv_client_plugin)
+  set(srv_client_plugin_DEVEL_PREFIX /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/devel)
   set(srv_client_plugin_INSTALL_PREFIX "")
   set(srv_client_plugin_PREFIX ${srv_client_plugin_DEVEL_PREFIX})
 else()
   set(srv_client_plugin_SOURCE_PREFIX "")
   set(srv_client_plugin_DEVEL_PREFIX "")
-  set(srv_client_plugin_INSTALL_PREFIX /home/xat/csed2/assessment1_ws/install)
+  set(srv_client_plugin_INSTALL_PREFIX /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/install)
   set(srv_client_plugin_PREFIX ${srv_client_plugin_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(srv_client_plugin_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/xat/csed2/assessment1_ws/src/srv_client_plugin/include " STREQUAL " ")
+if(NOT "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/srv_client_plugin/include " STREQUAL " ")
   set(srv_client_plugin_INCLUDE_DIRS "")
-  set(_include_dirs "/home/xat/csed2/assessment1_ws/src/srv_client_plugin/include")
+  set(_include_dirs "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/srv_client_plugin/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/xat/csed2/assessment1_ws/src/srv_client_plugin/include " STREQUAL 
         message(FATAL_ERROR "Project 'srv_client_plugin' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'srv_client_plugin' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/xat/csed2/assessment1_ws/src/srv_client_plugin/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'srv_client_plugin' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/srv_client_plugin/${idir}'.  ${_report}")
     endif()
     _list_append_unique(srv_client_plugin_INCLUDE_DIRS ${include})
   endforeach()
@@ -156,7 +156,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/xat/csed2/assessment1_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/devel/lib;/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

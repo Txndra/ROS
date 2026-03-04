@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/xat/csed2/assessment1_ws/src/srv_client_plugin/src/srv_client_plugin.cpp" "/home/xat/csed2/assessment1_ws/build/srv_client_plugin/CMakeFiles/srv_client_plugin.dir/src/srv_client_plugin.cpp.o"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/srv_client_plugin/src/srv_client_plugin.cpp" "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/srv_client_plugin/CMakeFiles/srv_client_plugin.dir/src/srv_client_plugin.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -18,8 +18,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/xat/csed2/assessment1_ws/src/srv_client_plugin/include"
-  "/home/xat/csed2/assessment1_ws/devel/include"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/srv_client_plugin/include"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/devel/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"

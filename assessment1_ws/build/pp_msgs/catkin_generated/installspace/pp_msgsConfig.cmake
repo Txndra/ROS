@@ -67,14 +67,14 @@ set(pp_msgs_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(pp_msgs_SOURCE_PREFIX /home/xat/csed2/assessment1_ws/src/pp_msgs)
-  set(pp_msgs_DEVEL_PREFIX /home/xat/csed2/assessment1_ws/devel)
+  set(pp_msgs_SOURCE_PREFIX /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs)
+  set(pp_msgs_DEVEL_PREFIX /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/devel)
   set(pp_msgs_INSTALL_PREFIX "")
   set(pp_msgs_PREFIX ${pp_msgs_DEVEL_PREFIX})
 else()
   set(pp_msgs_SOURCE_PREFIX "")
   set(pp_msgs_DEVEL_PREFIX "")
-  set(pp_msgs_INSTALL_PREFIX /home/xat/csed2/assessment1_ws/install)
+  set(pp_msgs_INSTALL_PREFIX /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/install)
   set(pp_msgs_PREFIX ${pp_msgs_INSTALL_PREFIX})
 endif()
 
@@ -156,7 +156,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/xat/csed2/assessment1_ws/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/install/lib;/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

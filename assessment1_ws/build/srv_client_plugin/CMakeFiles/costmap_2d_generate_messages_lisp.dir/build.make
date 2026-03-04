@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xat/csed2/assessment1_ws/src
+CMAKE_SOURCE_DIR = /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xat/csed2/assessment1_ws/build
+CMAKE_BINARY_DIR = /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build
 
 # Utility rule file for costmap_2d_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ srv_client_plugin/CMakeFiles/costmap_2d_generate_messages_lisp.dir/build: costma
 .PHONY : srv_client_plugin/CMakeFiles/costmap_2d_generate_messages_lisp.dir/build
 
 srv_client_plugin/CMakeFiles/costmap_2d_generate_messages_lisp.dir/clean:
-	cd /home/xat/csed2/assessment1_ws/build/srv_client_plugin && $(CMAKE_COMMAND) -P CMakeFiles/costmap_2d_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/srv_client_plugin && $(CMAKE_COMMAND) -P CMakeFiles/costmap_2d_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : srv_client_plugin/CMakeFiles/costmap_2d_generate_messages_lisp.dir/clean
 
 srv_client_plugin/CMakeFiles/costmap_2d_generate_messages_lisp.dir/depend:
-	cd /home/xat/csed2/assessment1_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xat/csed2/assessment1_ws/src /home/xat/csed2/assessment1_ws/src/srv_client_plugin /home/xat/csed2/assessment1_ws/build /home/xat/csed2/assessment1_ws/build/srv_client_plugin /home/xat/csed2/assessment1_ws/build/srv_client_plugin/CMakeFiles/costmap_2d_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/srv_client_plugin /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/srv_client_plugin /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/srv_client_plugin/CMakeFiles/costmap_2d_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : srv_client_plugin/CMakeFiles/costmap_2d_generate_messages_lisp.dir/depend
 

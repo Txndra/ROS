@@ -17,14 +17,14 @@ add_custom_target(pp_msgs_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv" NAME_WE)
+get_filename_component(_filename "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv" NAME_WE)
 add_custom_target(_pp_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pp_msgs" "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pp_msgs" "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv" ""
 )
 
-get_filename_component(_filename "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv" NAME_WE)
+get_filename_component(_filename "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv" NAME_WE)
 add_custom_target(_pp_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pp_msgs" "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv" "trajectory_msgs/JointTrajectory:std_msgs/Header:trajectory_msgs/JointTrajectoryPoint"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pp_msgs" "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv" "trajectory_msgs/JointTrajectoryPoint:trajectory_msgs/JointTrajectory:std_msgs/Header"
 )
 
 #
@@ -36,15 +36,15 @@ add_custom_target(_pp_msgs_generate_messages_check_deps_${_filename}
 
 ### Generating Services
 _generate_srv_cpp(pp_msgs
-  "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pp_msgs
 )
 _generate_srv_cpp(pp_msgs
-  "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/JointTrajectory.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/JointTrajectoryPoint.msg"
+  "/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/JointTrajectoryPoint.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/JointTrajectory.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pp_msgs
 )
 
@@ -60,9 +60,9 @@ add_custom_target(pp_msgs_generate_messages_cpp
 add_dependencies(pp_msgs_generate_messages pp_msgs_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv" NAME_WE)
+get_filename_component(_filename "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv" NAME_WE)
 add_dependencies(pp_msgs_generate_messages_cpp _pp_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv" NAME_WE)
+get_filename_component(_filename "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv" NAME_WE)
 add_dependencies(pp_msgs_generate_messages_cpp _pp_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -77,15 +77,15 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pp_msgs_generate_messages_cpp)
 
 ### Generating Services
 _generate_srv_eus(pp_msgs
-  "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pp_msgs
 )
 _generate_srv_eus(pp_msgs
-  "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/JointTrajectory.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/JointTrajectoryPoint.msg"
+  "/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/JointTrajectoryPoint.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/JointTrajectory.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pp_msgs
 )
 
@@ -101,9 +101,9 @@ add_custom_target(pp_msgs_generate_messages_eus
 add_dependencies(pp_msgs_generate_messages pp_msgs_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv" NAME_WE)
+get_filename_component(_filename "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv" NAME_WE)
 add_dependencies(pp_msgs_generate_messages_eus _pp_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv" NAME_WE)
+get_filename_component(_filename "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv" NAME_WE)
 add_dependencies(pp_msgs_generate_messages_eus _pp_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -118,15 +118,15 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pp_msgs_generate_messages_eus)
 
 ### Generating Services
 _generate_srv_lisp(pp_msgs
-  "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pp_msgs
 )
 _generate_srv_lisp(pp_msgs
-  "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/JointTrajectory.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/JointTrajectoryPoint.msg"
+  "/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/JointTrajectoryPoint.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/JointTrajectory.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pp_msgs
 )
 
@@ -142,9 +142,9 @@ add_custom_target(pp_msgs_generate_messages_lisp
 add_dependencies(pp_msgs_generate_messages pp_msgs_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv" NAME_WE)
+get_filename_component(_filename "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv" NAME_WE)
 add_dependencies(pp_msgs_generate_messages_lisp _pp_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv" NAME_WE)
+get_filename_component(_filename "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv" NAME_WE)
 add_dependencies(pp_msgs_generate_messages_lisp _pp_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -159,15 +159,15 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pp_msgs_generate_messages_lisp)
 
 ### Generating Services
 _generate_srv_nodejs(pp_msgs
-  "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pp_msgs
 )
 _generate_srv_nodejs(pp_msgs
-  "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/JointTrajectory.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/JointTrajectoryPoint.msg"
+  "/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/JointTrajectoryPoint.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/JointTrajectory.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pp_msgs
 )
 
@@ -183,9 +183,9 @@ add_custom_target(pp_msgs_generate_messages_nodejs
 add_dependencies(pp_msgs_generate_messages pp_msgs_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv" NAME_WE)
+get_filename_component(_filename "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv" NAME_WE)
 add_dependencies(pp_msgs_generate_messages_nodejs _pp_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv" NAME_WE)
+get_filename_component(_filename "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv" NAME_WE)
 add_dependencies(pp_msgs_generate_messages_nodejs _pp_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -200,15 +200,15 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pp_msgs_generate_messages_nodejs)
 
 ### Generating Services
 _generate_srv_py(pp_msgs
-  "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pp_msgs
 )
 _generate_srv_py(pp_msgs
-  "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/JointTrajectory.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/JointTrajectoryPoint.msg"
+  "/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/JointTrajectoryPoint.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/JointTrajectory.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pp_msgs
 )
 
@@ -224,9 +224,9 @@ add_custom_target(pp_msgs_generate_messages_py
 add_dependencies(pp_msgs_generate_messages pp_msgs_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv" NAME_WE)
+get_filename_component(_filename "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/PathPlanningPlugin.srv" NAME_WE)
 add_dependencies(pp_msgs_generate_messages_py _pp_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xat/csed2/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv" NAME_WE)
+get_filename_component(_filename "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs/srv/MoveItPlugin.srv" NAME_WE)
 add_dependencies(pp_msgs_generate_messages_py _pp_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

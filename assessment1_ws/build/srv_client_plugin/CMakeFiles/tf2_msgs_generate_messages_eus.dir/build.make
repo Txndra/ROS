@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xat/csed2/assessment1_ws/src
+CMAKE_SOURCE_DIR = /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xat/csed2/assessment1_ws/build
+CMAKE_BINARY_DIR = /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build
 
 # Utility rule file for tf2_msgs_generate_messages_eus.
 
@@ -63,10 +63,10 @@ srv_client_plugin/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build: tf2_msgs_
 .PHONY : srv_client_plugin/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
 
 srv_client_plugin/CMakeFiles/tf2_msgs_generate_messages_eus.dir/clean:
-	cd /home/xat/csed2/assessment1_ws/build/srv_client_plugin && $(CMAKE_COMMAND) -P CMakeFiles/tf2_msgs_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/srv_client_plugin && $(CMAKE_COMMAND) -P CMakeFiles/tf2_msgs_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : srv_client_plugin/CMakeFiles/tf2_msgs_generate_messages_eus.dir/clean
 
 srv_client_plugin/CMakeFiles/tf2_msgs_generate_messages_eus.dir/depend:
-	cd /home/xat/csed2/assessment1_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xat/csed2/assessment1_ws/src /home/xat/csed2/assessment1_ws/src/srv_client_plugin /home/xat/csed2/assessment1_ws/build /home/xat/csed2/assessment1_ws/build/srv_client_plugin /home/xat/csed2/assessment1_ws/build/srv_client_plugin/CMakeFiles/tf2_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/srv_client_plugin /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/srv_client_plugin /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/srv_client_plugin/CMakeFiles/tf2_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : srv_client_plugin/CMakeFiles/tf2_msgs_generate_messages_eus.dir/depend
 

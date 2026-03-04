@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "custom_gazebo_world"
-PROJECT_SPACE_DIR = "/home/xat/csed2/assessment1_ws/devel"
+PROJECT_SPACE_DIR = "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/devel"
 PROJECT_VERSION = "0.0.0"

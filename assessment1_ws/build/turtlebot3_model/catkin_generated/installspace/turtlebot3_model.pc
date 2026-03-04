@@ -1,4 +1,4 @@
-prefix=/home/xat/csed2/assessment1_ws/install
+prefix=/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/install
 
 Name: turtlebot3_model
 Description: Description of turtlebot3_model

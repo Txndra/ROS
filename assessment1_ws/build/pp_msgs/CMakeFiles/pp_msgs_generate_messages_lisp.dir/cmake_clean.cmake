@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/xat/csed2/assessment1_ws/devel/share/common-lisp/ros/pp_msgs/srv/MoveItPlugin.lisp"
-  "/home/xat/csed2/assessment1_ws/devel/share/common-lisp/ros/pp_msgs/srv/PathPlanningPlugin.lisp"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/devel/share/common-lisp/ros/pp_msgs/srv/MoveItPlugin.lisp"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/devel/share/common-lisp/ros/pp_msgs/srv/PathPlanningPlugin.lisp"
   "CMakeFiles/pp_msgs_generate_messages_lisp"
 )
 

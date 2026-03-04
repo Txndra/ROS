@@ -1,8 +1,8 @@
-# Install script for directory: /home/xat/csed2/assessment1_ws/src/custom_gazebo_world
+# Install script for directory: /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/custom_gazebo_world
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xat/csed2/assessment1_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xat/csed2/assessment1_ws/build/custom_gazebo_world/catkin_generated/installspace/custom_gazebo_world.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/custom_gazebo_world/catkin_generated/installspace/custom_gazebo_world.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_gazebo_world/cmake" TYPE FILE FILES
-    "/home/xat/csed2/assessment1_ws/build/custom_gazebo_world/catkin_generated/installspace/custom_gazebo_worldConfig.cmake"
-    "/home/xat/csed2/assessment1_ws/build/custom_gazebo_world/catkin_generated/installspace/custom_gazebo_worldConfig-version.cmake"
+    "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/custom_gazebo_world/catkin_generated/installspace/custom_gazebo_worldConfig.cmake"
+    "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/custom_gazebo_world/catkin_generated/installspace/custom_gazebo_worldConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_gazebo_world" TYPE FILE FILES "/home/xat/csed2/assessment1_ws/src/custom_gazebo_world/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_gazebo_world" TYPE FILE FILES "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/custom_gazebo_world/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_gazebo_world" TYPE DIRECTORY FILES "/home/xat/csed2/assessment1_ws/src/custom_gazebo_world/meshes")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_gazebo_world" TYPE DIRECTORY FILES "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/custom_gazebo_world/meshes")
 endif()
 

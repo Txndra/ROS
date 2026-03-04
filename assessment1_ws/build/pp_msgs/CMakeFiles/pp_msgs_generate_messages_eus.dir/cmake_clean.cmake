@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/xat/csed2/assessment1_ws/devel/share/roseus/ros/pp_msgs/manifest.l"
-  "/home/xat/csed2/assessment1_ws/devel/share/roseus/ros/pp_msgs/srv/MoveItPlugin.l"
-  "/home/xat/csed2/assessment1_ws/devel/share/roseus/ros/pp_msgs/srv/PathPlanningPlugin.l"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/devel/share/roseus/ros/pp_msgs/manifest.l"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/devel/share/roseus/ros/pp_msgs/srv/MoveItPlugin.l"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/devel/share/roseus/ros/pp_msgs/srv/PathPlanningPlugin.l"
   "CMakeFiles/pp_msgs_generate_messages_eus"
 )
 

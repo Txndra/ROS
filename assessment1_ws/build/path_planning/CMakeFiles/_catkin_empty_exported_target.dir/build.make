@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xat/csed2/assessment1_ws/src
+CMAKE_SOURCE_DIR = /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xat/csed2/assessment1_ws/build
+CMAKE_BINARY_DIR = /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ path_planning/CMakeFiles/_catkin_empty_exported_target.dir/build: _catkin_empty_
 .PHONY : path_planning/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 path_planning/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/xat/csed2/assessment1_ws/build/path_planning && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/path_planning && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : path_planning/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 path_planning/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/xat/csed2/assessment1_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xat/csed2/assessment1_ws/src /home/xat/csed2/assessment1_ws/src/path_planning /home/xat/csed2/assessment1_ws/build /home/xat/csed2/assessment1_ws/build/path_planning /home/xat/csed2/assessment1_ws/build/path_planning/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/path_planning /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/path_planning /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/path_planning/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : path_planning/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

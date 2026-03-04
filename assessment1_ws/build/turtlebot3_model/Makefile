@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xat/csed2/assessment1_ws/src
+CMAKE_SOURCE_DIR = /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xat/csed2/assessment1_ws/build
+CMAKE_BINARY_DIR = /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/xat/csed2/assessment1_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/xat/csed2/assessment1_ws/build/CMakeFiles /home/xat/csed2/assessment1_ws/build/turtlebot3_model/CMakeFiles/progress.marks
-	cd /home/xat/csed2/assessment1_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot3_model/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xat/csed2/assessment1_ws/build/CMakeFiles 0
+	cd /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/CMakeFiles /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/turtlebot3_model/CMakeFiles/progress.marks
+	cd /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot3_model/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/xat/csed2/assessment1_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot3_model/clean
+	cd /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot3_model/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/xat/csed2/assessment1_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot3_model/preinstall
+	cd /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot3_model/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/xat/csed2/assessment1_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot3_model/preinstall
+	cd /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot3_model/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/xat/csed2/assessment1_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 turtlebot3_model/CMakeFiles/turtlebot3_model_xacro_generated_to_devel_space_.dir/rule:
-	cd /home/xat/csed2/assessment1_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot3_model/CMakeFiles/turtlebot3_model_xacro_generated_to_devel_space_.dir/rule
+	cd /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebot3_model/CMakeFiles/turtlebot3_model_xacro_generated_to_devel_space_.dir/rule
 .PHONY : turtlebot3_model/CMakeFiles/turtlebot3_model_xacro_generated_to_devel_space_.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ turtlebot3_model_xacro_generated_to_devel_space_: turtlebot3_model/CMakeFiles/tu
 
 # fast build rule for target.
 turtlebot3_model_xacro_generated_to_devel_space_/fast:
-	cd /home/xat/csed2/assessment1_ws/build && $(MAKE) -f turtlebot3_model/CMakeFiles/turtlebot3_model_xacro_generated_to_devel_space_.dir/build.make turtlebot3_model/CMakeFiles/turtlebot3_model_xacro_generated_to_devel_space_.dir/build
+	cd /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build && $(MAKE) -f turtlebot3_model/CMakeFiles/turtlebot3_model_xacro_generated_to_devel_space_.dir/build.make turtlebot3_model/CMakeFiles/turtlebot3_model_xacro_generated_to_devel_space_.dir/build
 .PHONY : turtlebot3_model_xacro_generated_to_devel_space_/fast
 
 # Help Target
@@ -207,6 +207,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/xat/csed2/assessment1_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

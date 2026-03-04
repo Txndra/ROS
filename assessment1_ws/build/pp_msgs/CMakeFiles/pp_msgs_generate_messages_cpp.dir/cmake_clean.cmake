@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/xat/csed2/assessment1_ws/devel/include/pp_msgs/MoveItPlugin.h"
-  "/home/xat/csed2/assessment1_ws/devel/include/pp_msgs/PathPlanningPlugin.h"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/devel/include/pp_msgs/MoveItPlugin.h"
+  "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/devel/include/pp_msgs/PathPlanningPlugin.h"
   "CMakeFiles/pp_msgs_generate_messages_cpp"
 )
 

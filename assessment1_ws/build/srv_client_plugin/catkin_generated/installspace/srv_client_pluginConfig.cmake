@@ -67,14 +67,14 @@ set(srv_client_plugin_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(srv_client_plugin_SOURCE_PREFIX /home/xat/csed2/assessment1_ws/src/srv_client_plugin)
-  set(srv_client_plugin_DEVEL_PREFIX /home/xat/csed2/assessment1_ws/devel)
+  set(srv_client_plugin_SOURCE_PREFIX /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/srv_client_plugin)
+  set(srv_client_plugin_DEVEL_PREFIX /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/devel)
   set(srv_client_plugin_INSTALL_PREFIX "")
   set(srv_client_plugin_PREFIX ${srv_client_plugin_DEVEL_PREFIX})
 else()
   set(srv_client_plugin_SOURCE_PREFIX "")
   set(srv_client_plugin_DEVEL_PREFIX "")
-  set(srv_client_plugin_INSTALL_PREFIX /home/xat/csed2/assessment1_ws/install)
+  set(srv_client_plugin_INSTALL_PREFIX /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/install)
   set(srv_client_plugin_PREFIX ${srv_client_plugin_INSTALL_PREFIX})
 endif()
 
@@ -156,7 +156,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/xat/csed2/assessment1_ws/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/install/lib;/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

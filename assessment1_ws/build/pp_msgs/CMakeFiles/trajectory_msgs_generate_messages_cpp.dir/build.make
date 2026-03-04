@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xat/csed2/assessment1_ws/src
+CMAKE_SOURCE_DIR = /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xat/csed2/assessment1_ws/build
+CMAKE_BINARY_DIR = /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build
 
 # Utility rule file for trajectory_msgs_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ pp_msgs/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build: trajectory_m
 .PHONY : pp_msgs/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
 
 pp_msgs/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/clean:
-	cd /home/xat/csed2/assessment1_ws/build/pp_msgs && $(CMAKE_COMMAND) -P CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/pp_msgs && $(CMAKE_COMMAND) -P CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : pp_msgs/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/clean
 
 pp_msgs/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/depend:
-	cd /home/xat/csed2/assessment1_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xat/csed2/assessment1_ws/src /home/xat/csed2/assessment1_ws/src/pp_msgs /home/xat/csed2/assessment1_ws/build /home/xat/csed2/assessment1_ws/build/pp_msgs /home/xat/csed2/assessment1_ws/build/pp_msgs/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/pp_msgs /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/pp_msgs /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/pp_msgs/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : pp_msgs/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/depend
 

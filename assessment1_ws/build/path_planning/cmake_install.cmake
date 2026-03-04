@@ -1,8 +1,8 @@
-# Install script for directory: /home/xat/csed2/assessment1_ws/src/path_planning
+# Install script for directory: /home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/path_planning
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xat/csed2/assessment1_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,26 +38,26 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xat/csed2/assessment1_ws/build/path_planning/catkin_generated/installspace/path_planning.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/path_planning/catkin_generated/installspace/path_planning.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/path_planning/cmake" TYPE FILE FILES
-    "/home/xat/csed2/assessment1_ws/build/path_planning/catkin_generated/installspace/path_planningConfig.cmake"
-    "/home/xat/csed2/assessment1_ws/build/path_planning/catkin_generated/installspace/path_planningConfig-version.cmake"
+    "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/path_planning/catkin_generated/installspace/path_planningConfig.cmake"
+    "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/build/path_planning/catkin_generated/installspace/path_planningConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/path_planning" TYPE FILE FILES "/home/xat/csed2/assessment1_ws/src/path_planning/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/path_planning" TYPE FILE FILES "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/path_planning/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/path_planning" TYPE DIRECTORY FILES
-    "/home/xat/csed2/assessment1_ws/src/path_planning/launch"
-    "/home/xat/csed2/assessment1_ws/src/path_planning/maps"
-    "/home/xat/csed2/assessment1_ws/src/path_planning/param"
-    "/home/xat/csed2/assessment1_ws/src/path_planning/rviz"
+    "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/path_planning/launch"
+    "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/path_planning/maps"
+    "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/path_planning/param"
+    "/home/xat/eb536/robotics/COGNITIVE-ROBITICS/assessment1_ws/src/path_planning/rviz"
     )
 endif()
 
