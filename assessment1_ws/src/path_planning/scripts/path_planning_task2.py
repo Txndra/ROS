@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 import rospy
 import heapq
+import math
 from pp_msgs.srv import PathPlanningPlugin, PathPlanningPluginResponse
 from geometry_msgs.msg import Twist, PoseStamped
 from gridviz import GridViz
-import neighbor # Uses your neighbor.py helper
+from algorithms import neighbors
 
 # --- TASK 2.1 HELPER FUNCTIONS ---
 
@@ -29,7 +30,7 @@ def reconstruct_path(parents, curr_idx, resolution, origin, width):
     return path[::-1]
 
 def a_star_smoothed(start, goal, width, height, costmap, resolution, origin, grid_visualisation):
-    """The Optimized A* implementation with Turning Penalty."""
+    """The Optimised A* implementation with Turning Penalty."""
     # Convert Start/Goal meters to Grid Indices
     s_x = int((start.pose.position.x - origin[0]) / resolution)
     s_y = int((start.pose.position.y - origin[1]) / resolution)
@@ -46,24 +47,40 @@ def a_star_smoothed(start, goal, width, height, costmap, resolution, origin, gri
 
     while pq:
         f, curr, last_dir = heapq.heappop(pq)
-
-        # (i) Visualise node being traversed
         grid_visualisation.set_color(curr, "pale yellow")
 
         if curr == goal_idx:
             return reconstruct_path(parents, curr, resolution, origin, width)
 
-        # (ii) Expand neighbors using neighbor.py
-        for nb_idx, dx, dy in neighbor.get_neighbors(curr, width, height, costmap):
+        for nb_info in neighbors.find_neighbors(curr, width, height, costmap, 1.0):
+            nb_idx = nb_info[0]
+            nb_step_cost = nb_info[1]
+            
+            # Calculate dx, dy for the vector
+            curr_x, curr_y = curr % width, curr // width
+            nb_x, nb_y = nb_idx % width, nb_idx // width
+            dx, dy = nb_x - curr_x, nb_y - curr_y
+
             grid_visualisation.set_color(nb_idx, "orange")
 
-            # Calculate cost + turning penalty (smoothing)
-            move_cost = 1.414 if (dx != 0 and dy != 0) else 1.0
-            penalty = 0
-            if last_dir != (0,0) and (dx, dy) != last_dir:
-                penalty = 15.0 # The "Smoothing" factor
+            # --- NEW ANGLE LOGIC FOR OBJECTIVE 1 ---
+            angle_penalty = 0
+            if last_dir != (0,0):
+                angle_old = math.atan2(last_dir[1], last_dir[0])
+                angle_new = math.atan2(dy, dx)
+                # Calculate smallest difference in radians
+                diff = angle_new - angle_old
+                theta = abs(math.atan2(math.sin(diff), math.cos(diff)))
+                
+                # Proportional penalty (Objective 1.1)
+                angle_penalty = theta * 10.0 
+                
+                # Backtracking check (Objective 1.2)
+                if last_dir == (-dx, -dy):
+                    angle_penalty += 50.0
 
-            new_g = g_costs[curr] + move_cost + penalty
+            # Combined cost
+            new_g = g_costs[curr] + nb_step_cost + angle_penalty
 
             if nb_idx not in g_costs or new_g < g_costs[nb_idx]:
                 g_costs[nb_idx] = new_g
@@ -80,11 +97,20 @@ def make_plan(req):
     start, goal = req.start, req.goal
     resolution, origin = 0.05, [-10.0, -10.0, 0.0]
 
-    # Initialize visualization
-    grid_viz = GridViz(costmap, resolution, origin, start, goal, width)
+    # 1. Calculate the indices HERE so GridViz can use them
+    s_x = int((start.pose.position.x - origin[0]) / resolution)
+    s_y = int((start.pose.position.y - origin[1]) / resolution)
+    start_idx = (s_y * width) + s_x
 
-    # Run the Task 2.1 algorithm
-    path = a_star_smoothed(start, goal, width, height, costmap, resolution, origin, grid_viz)
+    g_x = int((goal.pose.position.x - origin[0]) / resolution)
+    g_y = int((goal.pose.position.y - origin[1]) / resolution)
+    goal_idx = (g_y * width) + g_x
+
+    # 2. Now pass them to GridViz
+    grid_viz = GridViz(costmap, resolution, origin, start_idx, goal_idx, width)
+    
+    # 3. Call the algorithm
+    path = a_star_smoothed(start, goal, width, height, costmap, resolution, origin, grid_viz)path = a_star_smoothed(start, goal, width, height, costmap, resolution, origin, grid_viz)
 
     if path:
         rospy.loginfo("Task 2.1: Optimized path found!")
