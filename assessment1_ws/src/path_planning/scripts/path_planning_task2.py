@@ -110,7 +110,7 @@ def make_plan(req):
     grid_viz = GridViz(costmap, resolution, origin, start_idx, goal_idx, width)
     
     # 3. Call the algorithm
-    path = a_star_smoothed(start, goal, width, height, costmap, resolution, origin, grid_viz)path = a_star_smoothed(start, goal, width, height, costmap, resolution, origin, grid_viz)
+    path = a_star_smoothed(start, goal, width, height, costmap, resolution, origin, grid_viz)
 
     if path:
         rospy.loginfo("Task 2.1: Optimized path found!")
