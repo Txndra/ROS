@@ -1,15 +1,15 @@
 <launch>
   <arg name="model" default="burger"/>
-  <arg name="x_pos" default="-2.5"/>
-  <arg name="y_pos" default="-3.35"/>
+  <arg name="x_pos" default="-3"/>
+  <arg name="y_pos" default="-2.5"/>
   <arg name="z_pos" default="0.0"/>
   
-  <arg name="map_file" default="$(find custom_gazebo_world)/maps/my_final_map.yaml"/>
+  <arg name="map_file" default="$(find custom_gazebo_world)/maps/mymap.yaml"/>
 
   <env name="TURTLEBOT3_MODEL" value="$(arg model)"/>
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find custom_gazebo_world)/worlds/my_maze.world"/>
+    <arg name="world_name" value="$(find custom_gazebo_world)/worlds/newmap.world"/>
     <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
     <arg name="gui" value="true"/>
