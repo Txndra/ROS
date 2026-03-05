@@ -4,58 +4,82 @@ import rospy
 from pp_msgs.srv import PathPlanningPlugin, PathPlanningPluginResponse
 from geometry_msgs.msg import Twist
 from gridviz import GridViz
+from a_star_algo import a_star
 
-def make_plan(req):
-  ''' 
-  Callback function used by the service server to process
-  requests from clients. It returns a msg of type PathPlanningPluginResponse
-  ''' 
-  costmap = req.costmap_ros
-  # number of columns in the occupancy grid
-  width = req.width
-  # number of rows in the occupancy grid
-  height = req.height
-  start = req.start
-  goal = req.goal
-  # side of each grid map square in meters
-  resolution = 0.05
-  # origin of grid map
-  origin = [] #hint: find this in your YAML map file
+class AStarPathServer:
+    def __init__(self):
+        """Initializes the service node and communication handles."""
+        rospy.init_node('path_planning_server', log_level=rospy.INFO, anonymous=False)
+        rospy.on_shutdown(self.handle_shutdown)
+      
+        self.res = 0.05
+        self.map_origin = [-3.898960, -3.985016, 0.000000]
+        
+        # Communication
+        self.velocity_signal = rospy.Publisher('/cmd_vel', Twist, queue_size=5)
+        self.service_provider = rospy.Service(
+            "/move_base/SrvClientPlugin/make_plan",
+            PathPlanningPlugin,
+            self.process_path_request
+        )
+        
+        rospy.loginfo("NAV SERVER: A* System Online.")
 
-  grid_visualisation = GridViz(costmap, resolution, origin, start, goal, width)
+    def process_path_request(self, req):
+        """Processes the incoming planning request and returns the A* solution."""
+        
+        costmap_data = req.costmap_ros
+        cols = req.width
+        rows = req.height
+        start_node = req.start
+        goal_node = req.goal
 
-  # time statistics
-  start_time = rospy.Time.now()
+        visualizer = GridViz(costmap_data, self.res, self.map_origin, start_node, goal_node, cols)
 
-  # calculate the shortest path
+        timer_start = rospy.Time.now()
 
-  """
-  Your code continues here.
-  path = a_star(start, goal, width, height, costmap, resolution, origin, grid_visualisation)
+        # Execute core algorithm
+        final_route, total_nodes_checked = a_star(
+            start_node, goal_node, cols, rows, costmap_data,
+            self.res, self.map_origin, visualizer
+        )
 
-  """
+        elapsed_time = (rospy.Time.now() - timer_start).to_sec()
+        response = PathPlanningPluginResponse()
 
-  if not path:
-    rospy.logwarn("No path returned by the path algorithm")
-    path = []
-  else:
-    # additional code here as per your implementation, e.g., computing/displaying your performance metrics
-    rospy.loginfo('Path sent to navigation stack')
+        if not final_route:
+            rospy.logerr(">>> SEARCH FAILURE: No valid path identified.")
+            path_len = 0
+            expanded = total_nodes_checked
+        else:
+            path_len = len(final_route)
+            expanded = total_nodes_checked - path_len
+            rospy.loginfo(">>> SEARCH SUCCESS: Plan generated.")
+            response.plan = final_route
+            
+        self.log_performance(path_len, elapsed_time, expanded)
 
-  resp = PathPlanningPluginResponse()
-  resp.plan = path
-  return resp
+        return response
 
-def clean_shutdown():
-  cmd_vel.publish(Twist())
-  rospy.sleep(1)
+    def log_performance(self, length, time, expanded):
+        """Redesigned performance output for assessment logging."""
+        header = " [ A* ALGORITHM DATA ] "
+        rospy.loginfo(header.center(40, "="))
+        rospy.loginfo(f"| Outcome:      {'SUCCESS' if length > 0 else 'FAILED'}")
+        rospy.loginfo(f"| Path Cost:    {length} units")
+        rospy.loginfo(f"| Compute Time: {time:.4f} s")
+        rospy.loginfo(f"| Search Scope: {expanded} nodes expanded")
+        rospy.loginfo("=" * 40)
+
+    def handle_shutdown(self):
+        """Ensures the robot stops all movement upon node termination."""
+        rospy.loginfo("Terminating Server...")
+        self.velocity_signal.publish(Twist())
+        rospy.sleep(1)
 
 if __name__ == '__main__':
-  rospy.init_node('path_planning_server', log_level=rospy.INFO, anonymous=False)
-  make_plan_service = rospy.Service("/move_base/SrvClientPlugin/make_plan", PathPlanningPlugin, make_plan)
-  cmd_vel = rospy.Publisher('/cmd_vel', Twist, queue_size=5)
-  rospy.on_shutdown(clean_shutdown)
-
-  while not rospy.core.is_shutdown():
-    rospy.rostime.wallsleep(0.5)
-  rospy.Timer(rospy.Duration(2), rospy.signal_shutdown('Shutting down'), oneshot=True)
+    try:
+        server = AStarPathServer()
+        rospy.spin()
+    except rospy.ROSInterruptException:
+        pass
