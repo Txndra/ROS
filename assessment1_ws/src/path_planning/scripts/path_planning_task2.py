@@ -29,16 +29,8 @@ def reconstruct_path(parents, curr_idx, resolution, origin, width):
         curr_idx = parents[curr_idx]
     return path[::-1]
 
-def a_star_smoothed(start, goal, width, height, costmap, resolution, origin, grid_visualisation):
+def a_star_smoothed(start_idx, goal_idx, width, height, costmap, resolution, origin, grid_visualisation):
     """The Optimised A* implementation with Turning Penalty."""
-    # Convert Start/Goal meters to Grid Indices
-    s_x = int((start.pose.position.x - origin[0]) / resolution)
-    s_y = int((start.pose.position.y - origin[1]) / resolution)
-    start_idx = (s_y * width) + s_x
-
-    g_x = int((goal.pose.position.x - origin[0]) / resolution)
-    g_y = int((goal.pose.position.y - origin[1]) / resolution)
-    goal_idx = (g_y * width) + g_x
 
     # Priority Queue: (f_score, current_index, last_direction)
     pq = [(0, start_idx, (0,0))]
@@ -94,24 +86,22 @@ def a_star_smoothed(start, goal, width, height, costmap, resolution, origin, gri
 def make_plan(req):
     # Map metadata from the request
     costmap, width, height = req.costmap_ros, req.width, req.height
-    start, goal = req.start, req.goal
-    resolution, origin = 0.05, [-10.0, -10.0, 0.0]
-
-    # 1. Calculate the indices HERE so GridViz can use them
-    s_x = int((start.pose.position.x - origin[0]) / resolution)
-    s_y = int((start.pose.position.y - origin[1]) / resolution)
-    start_idx = (s_y * width) + s_x
-
-    g_x = int((goal.pose.position.x - origin[0]) / resolution)
-    g_y = int((goal.pose.position.y - origin[1]) / resolution)
-    goal_idx = (g_y * width) + g_x
+    
+    # These are already integers (indices), so we don't need .pose.position
+    start_idx = req.start
+    goal_idx = req.goal
+    
+    resolution = 0.05
+    origin = [-3.898960, -3.985016, 0.0]
 
     # 2. Now pass them to GridViz
+    # (Using the indices directly as provided by the request)
     grid_viz = GridViz(costmap, resolution, origin, start_idx, goal_idx, width)
     
     # 3. Call the algorithm
-    path = a_star_smoothed(start, goal, width, height, costmap, resolution, origin, grid_viz)
-
+    # Pass the integers start_idx and goal_idx
+    path = a_star_smoothed(start_idx, goal_idx, width, height, costmap, resolution, origin, grid_viz)   
+    
     if path:
         rospy.loginfo("Task 2.1: Optimized path found!")
     
