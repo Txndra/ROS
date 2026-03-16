@@ -1,2 +1,2 @@
-# COGNITIVE-ROBITICS
-Group Project
+# ROS
+ROS Pathfinding with A*
